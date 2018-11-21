@@ -50,3 +50,8 @@ page {
     width: 80%;
     margin-top: 15px;
 }
+
+.sendVer{
+  size: mini;
+  font-size: 15px;
+}

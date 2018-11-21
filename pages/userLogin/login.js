@@ -2,6 +2,7 @@ const app = getApp()
 
 Page({
   data: {
+    valueUsername:' '
   },
 
   onLoad: function (params) {
@@ -21,6 +22,7 @@ Page({
      var formObject = data.detail.value;
      var username   = formObject.username;
      var password   = formObject.password;
+     console.log(username);
 
      if(username == null || password == null){
        wx.showToast({
@@ -89,5 +91,17 @@ Page({
     wx.redirectTo({
       url: '../userRegist/regist',
     })
+  },
+  forgetPass: function (){
+    var me = this;
+    wx.navigateTo({
+      url: '../forgetPass/forgetPass?username=' + me.data.valueUsername
+    })
+  },
+  inputvalue:function(e){
+    var me = this;
+    me.setData({
+      valueUsername:e.detail.value
+    });
   }
 })

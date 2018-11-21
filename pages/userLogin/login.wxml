@@ -8,7 +8,7 @@
             <view class="inputView">
                 <image class="nameImage" src="../resource/images/username.png"></image>
                 <label class="loginLabel">账号</label>
-                <input name="username" value='echoplus' class="inputText" placeholder="请输入账号" />
+                <input name="username" value='echoplus' class="inputText" placeholder="请输入账号" bindinput="inputvalue"/>
             </view>
             <view class="line"></view>
 
@@ -18,7 +18,11 @@
                 <label class="loginLabel">密码</label>
                 <input name="password" value='echoplus' class="inputText" password="true" placeholder="请输入密码" />
             </view>
-
+         
+             <!--密码-->
+            <view class="inputView-forget">
+                <button class="inputView-forget" bindtap='forgetPass'>忘记密码?</button>
+            </view>
             <!--按钮-->
             <view>
                 <button class="loginBtn" type="primary" form-type='submit'>登录</button>
